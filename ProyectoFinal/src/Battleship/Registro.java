@@ -12,10 +12,9 @@ public class Registro {
     private static final String NOMBRE_ARCHIVO = "registro_batalla_naval.txt";
     private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
-    /*
-     Inicializa el sistema de registro, abriendo el archivo para escritura.
-      Debe llamarse al inicio del juego.
-     */
+    
+     //Inicializa el sistema de registro, abriendo el archivo para escritura.
+    
     public static void iniciarRegistro() throws IOException {
         writer = new PrintWriter(new FileWriter(NOMBRE_ARCHIVO, false));
         registrar("--- INICIO DEL JUEGO DE BATALLA NAVAL ---");
@@ -32,10 +31,8 @@ public class Registro {
         }
     }
 
-    /*
-      Cierra el archivo de registro.
-       Debe llamarse al terminar el juego.
-     */
+    
+      //Cierra el archivo de registro.
     public static void cerrarRegistro() {
         if (writer != null) {
             registrar("--- FIN DEL JUEGO DE BATALLA NAVAL ---");
